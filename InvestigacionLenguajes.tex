@@ -55,18 +55,32 @@
 \usepackage{listings} 
 %%% The "real" document content comes below...
 
-\title{Investigación de Lenguajes - Pascal}
-\author{Javier Tibau}
+\title{Investigación de Lenguajes - Python}
+
 %\date{} % Activate to display a given date or no date (if empty),
          % otherwise the current date is printed 
 
 \begin{document}
 \maketitle
 %\tableofcontents % No hace falta un TOC en un artículo corto
+\author{Leonel Ramirez\\José Vélez\\Kevin Campuzano}
 
 \section{Introducción}
 Python es un lenguaje de programación diseñada por el europeo Guido Van Rossum en el año 1991, tomando ideas prestadas de los lenguajes de programación que conocía por ejemplo ABC y lenguaje de programación Haskell.
 Destaca sus características que le han llevado a ser un lenguaje muy conocido hoy en día, también por ser de código abierto administrado por Python Software Foundation, El nombre de Python fue inspirado por la serie The Monty Python de la BBC de Londres.
+\\
+En la figura 1 se explica la genealogía de los lenguajes de programacion comunes de alto nivel
+en el que nos dice que Python es deciendiente del lenguaje de programacion denominado MODULA-3
+el cual es hijo de MODULA-2 que proviene del lenguaje de programación Pasca, en el Grafico se lo detalla
+de mejor manera.
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=.40\textwidth]{./imagenes/Arbol.jpg}
+\caption{Arbol Genealogico}
+\label{Arbol Genealogico}
+\end{center}
+\end{figure}
+\\
 Es un lenguaje scripting independiente de plataforma y orientado a objetos  por lo tanto está preparado para soportar cualquier tipo de programa, como aplicaciones Windows a servidores de red hasta páginas web.
 Python es mantenido por un numeroso grupo de voluntarios en todo el mundo por ser un software de código abierto.  También es un lenguaje interpretado quiere decir que no necesita compilar el código fuente para poder ejecutar, una de las ventajas que ofrece es su rapidez de desarrollo.
 \begin{figure}[htbp]
@@ -83,7 +97,7 @@ Python es mantenido por un numeroso grupo de voluntarios en todo el mundo por se
 \\    Python es extremadamente sencillo de iniciarse en la programación ya que ofrece una sintaxis extraordinariamente simple.\\
 
 \textbf{Lenguaje de Alto Nivel}
-\\    Cuando escribes programas en Python nunca debes preocuparte por detalles de bajo nivel, como manejar la memoria empleada por tu programa.\\
+\\    Cuando escribes programas en Python, HTML, C++ y PHP  nunca debes preocuparte por detalles de bajo nivel, como manejar la memoria empleada por tu programa.\\
 
 \textbf{Sintaxis de Python}
 \\	  Es muy elegante y permite la escritura de programas cuya lectura resulta sencilla.\\
@@ -137,17 +151,79 @@ Hoy en dia, Python es mantenido por un numeroso grupo de voluntarios en todo el 
 \end{figure}
 
 \section{Tutorial de Instalación}
+
+Tutorial como Instalar Python en Windows\\
+ 
+
+1.	Identifica la versión de Windows que se ejecuta en tu PC. Tienes que saber  si maquina está ejecutando Windows 95, 98, NT, 2000, ME, XP, Vista o Windows 7.\\
+
+2.	Decide si necesitarás el código fuente de Python bueno se recomienda que la instale. Instalar la fuente es opcional. Python es un software de código abierto, lo que significa que el código está disponible para los programadores para modificar o distribuir a su antojo.\\
+
+3.	Entrar a la página web Python.org. Todas las distribuciones oficiales del programa se pueden encontrar aquí, incluyendo un archivo. Msi instalador para Windows.\\
+
+4.	Haz clic en el enlace "Descargar". Una lista de archivos aparecerá. Cada archivo es una distribución de Python para una plataforma específica.\\
+
+5.	Encuentra el .exe o instalador para la versión de Windows que tienes instalada en un tu máquina.  Numerosas versiones de Python están disponibles para entornos Windows.\\
+
+
+6.	En las versiones actuales de Windows todos las archivos que bajes de la red se alojaran en una carpeta llamada descarga la puedes encontrar en tus archivos, es ahí donde se guardara el instalador de Python.\\  
+
+Ejecuta el instalador\\
+
+1.	Ejecuta el instalador. Busca el archivo. Msi usando Windows explorer y ejecútalo. Un programa de instalación se abrirá. Haz clic en Instalar para todos los usuarios y luego en Siguiente.\\
+
+2.	Escoge un directorio de instalación para Python. El valor por defecto, "C: \ Python25", se recomienda dejar el mismo directorio si tienen experiencias instalando programas.\\
+
+3.	Elige las funciones que deseas instalar y haz clic en "Siguiente" para iniciar la instalación. Espera un momento hasta que se complete la instalación. Una vez que se haya instalado Python, haz clic en "Finalizar".\\
+
+4.	Haz clic en Programas, Python 2.5 luego Python desde el menú Inicio de Windows para probarlo. Una ventana en negro y blanco se abrirá con un comando interactivo de Python del sistema. Una vez que hayas confirmado que el programa está instalado correctamente, cierra la ventana.\\
+
+5.	Haciendo clic en Inicio y luego en Ejecutar. Cuando el diálogo se abra, escribe cmd en el cuadro de búsqueda y presiona Aceptar. Ejecutar los programas de Python desde la línea de comandos es una forma útil de ver el destino y pasar parámetros aunque se necesita un poco de practica para dominar la ventana de comandos.\\
+
+6.	Cambia a tu directorio de Python. Si aceptas el directorio por defecto, escribe cd,  C: \ Python25" en el prompt del comando y presiona Enter. Si lo has instalado en otro lugar, cambia C: \ Python25 a la carpeta de instalación. Escribe python y presiona Enter para iniciar la línea de comandos de Python del sistema.\\
+
+
 \section{Hola Mundo y otros Programas Introductorios}
+
+ Programa Factorial
+  \\  
+ Se resolvera en forma recursiva
+
 
 \lstset{language=Pascal}          % Set your language (you can change the language for each code-block optionally)
 
 \begin{lstlisting}[frame=single]  % Start your code-block
 for i:=maxint to 0 do
-begin
-{ do nothing }
-end;
-Write('Case insensitive ');
-Write('Pascal keywords.');
+
+def fibonacci(contador,n,p1,p2):
+  var = ""
+   if(contador!=n):
+   	var=fibonacci(contador+1,n,p2,p1+p2)
+   	var=str(p2)+" "+var
+   return var
+n= int(input("Ingrese un numero entero\n"))
+if(n>0):
+ a=fibonacci(0,(n-1),0,1)
+ print("0 "+a)  
+\end{lstlisting}
+
+
+\newpage
+ Programa Fibonacci
+
+\begin{lstlisting}[frame=single]  % Start your code-block
+for i:=maxint to 0 do
+def factorial(x,n):
+  if(n>0):
+   x=factorial(x,n-1)
+   x=x*n
+  else
+   x=1
+  return x
+ n= int(input("ingresa un numero  \n"))
+ x=1
+ x=factorial(x,n)
+ print(x)
 \end{lstlisting}
 
 
