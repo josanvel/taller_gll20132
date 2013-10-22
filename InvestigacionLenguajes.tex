@@ -97,7 +97,7 @@ Python es mantenido por un numeroso grupo de voluntarios en todo el mundo por se
 \\    Python es extremadamente sencillo de iniciarse en la programación ya que ofrece una sintaxis extraordinariamente simple.\\
 
 \textbf{Lenguaje de Alto Nivel}
-\\    Cuando escribes programas en Python, HTML, C++ y PHP  nunca debes preocuparte por detalles de bajo nivel, como manejar la memoria empleada por tu programa.\\
+\\    No se debe de preocupar por los detalles de bajo nivel cuando se programa en Python, por ejemplo el manejo de la memoria empleada por el programa.\\
 
 \textbf{Sintaxis de Python}
 \\	  Es muy elegante y permite la escritura de programas cuya lectura resulta sencilla.\\
@@ -164,6 +164,15 @@ Tutorial como Instalar Python en Windows\\
 4.	Haz clic en el enlace "Descargar". Una lista de archivos aparecerá. Cada archivo es una distribución de Python para una plataforma específica.\\
 
 5.	Encuentra el .exe o instalador para la versión de Windows que tienes instalada en un tu máquina.  Numerosas versiones de Python están disponibles para entornos Windows.\\
+para entornos Windows.\\
+
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=.10\textwidth]{./imagenes/ide.png}
+\caption{.exe}
+\label{qt}
+\end{center}
+\end{figure}
 
 
 6.	En las versiones actuales de Windows todos las archivos que bajes de la red se alojaran en una carpeta llamada descarga la puedes encontrar en tus archivos, es ahí donde se guardara el instalador de Python.\\  
@@ -171,10 +180,30 @@ Tutorial como Instalar Python en Windows\\
 Ejecuta el instalador\\
 
 1.	Ejecuta el instalador. Busca el archivo. Msi usando Windows explorer y ejecútalo. Un programa de instalación se abrirá. Haz clic en Instalar para todos los usuarios y luego en Siguiente.\\
-
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=.30\textwidth]{./imagenes/primerpaso.png}
+\label{qt}
+\end{center}
+\end{figure}
+\newpage
 2.	Escoge un directorio de instalación para Python. El valor por defecto, "C: \ Python25", se recomienda dejar el mismo directorio si tienen experiencias instalando programas.\\
 
 3.	Elige las funciones que deseas instalar y haz clic en "Siguiente" para iniciar la instalación. Espera un momento hasta que se complete la instalación. Una vez que se haya instalado Python, haz clic en "Finalizar".\\
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=.30\textwidth]{./imagenes/segundopaso.png}
+
+\label{qt}
+\end{center}
+\end{figure}
+
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=.30\textwidth]{./imagenes/tercerpaso.png}
+\label{qt}
+\end{center}
+\end{figure}
 
 4.	Haz clic en Programas, Python 2.5 luego Python desde el menú Inicio de Windows para probarlo. Una ventana en negro y blanco se abrirá con un comando interactivo de Python del sistema. Una vez que hayas confirmado que el programa está instalado correctamente, cierra la ventana.\\
 
@@ -185,13 +214,17 @@ Ejecuta el instalador\\
 
 \section{Hola Mundo y otros Programas Introductorios}
 
- Programa Factorial
-  \\  
- Se resolvera en forma recursiva
+\lstset{language=Python}          % Set your language (you can change the language for each code-block optionally)
 
 
-\lstset{language=Pascal}          % Set your language (you can change the language for each code-block optionally)
+Programa Hola Mundo!
+\begin{lstlisting}[frame=single]  % Start your code-block
+for i:=maxint to 0 do
+def holaMundo(self):
+	print 'Hola Mundo!'
+\end{lstlisting}
 
+Programa Fibonacci
 \begin{lstlisting}[frame=single]  % Start your code-block
 for i:=maxint to 0 do
 
@@ -207,10 +240,7 @@ if(n>0):
  print("0 "+a)  
 \end{lstlisting}
 
-
-\newpage
- Programa Fibonacci
-
+Programa Factorial
 \begin{lstlisting}[frame=single]  % Start your code-block
 for i:=maxint to 0 do
 def factorial(x,n):
@@ -225,7 +255,5 @@ def factorial(x,n):
  x=factorial(x,n)
  print(x)
 \end{lstlisting}
-
-
 
 \end{document}
